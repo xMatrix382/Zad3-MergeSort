@@ -30,18 +30,12 @@ private:
         delete[] P;
     }
 
-    void sortujRekurencyjnie(T* tab, int lewy, int prawy) {
-        if (lewy >= prawy) return;
-
-        int srodek = lewy + (prawy - lewy) / 2;
-        sortujRekurencyjnie(tab, lewy, srodek);
-        sortujRekurencyjnie(tab, srodek + 1, prawy);
-        scal(tab, lewy, srodek, prawy);
-    }
-
 public:
     void sortuj(T* tab, int rozmiar) {
         if (tab == nullptr || rozmiar <= 1) return;
-        sortujRekurencyjnie(tab, 0, rozmiar - 1);
+        int srodek = rozmiar / 2;
+        sortuj(tab, srodek);
+        sortuj(tab + srodek, rozmiar - srodek);
+        scal(tab, 0, srodek - 1, rozmiar - 1);
     }
 };
