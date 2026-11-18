@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="MergeSort/MergeSort.vcxproj" Id="af56d3eb-0f05-4887-91dd-38ad9786e012" />
+  <Project Path="MergeSortGoogleTest/MergeSortGoogleTest.vcxproj" Id="765052df-c2f8-4e94-839f-35dc9a903bed" />
+</Solution>
