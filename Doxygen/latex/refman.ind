@@ -1,0 +1,21 @@
+\begin{theindex}
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{11}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{11}
+  \item {MergeSort Directory Reference}, \hyperpage{7}
+  \item {MergeSort$<$ T $>$}, \hyperpage{9}
+    \subitem {scal}, \hyperpage{10}
+    \subitem {sortuj}, \hyperpage{10}
+  \item {MergeSort/main.cpp}, \hyperpage{11, 12}
+  \item {MergeSort/MergeSort.h}, \hyperpage{12, 13}
+
+  \indexspace
+
+  \item {scal}
+    \subitem {MergeSort$<$ T $>$}, \hyperpage{10}
+  \item {sortuj}
+    \subitem {MergeSort$<$ T $>$}, \hyperpage{10}
+
+\end{theindex}

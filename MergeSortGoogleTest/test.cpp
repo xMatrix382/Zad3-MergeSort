@@ -1,7 +1,14 @@
+/**
+ * @file test.cpp
+ * @brief Zestaw testów jednostkowych Google Test weryfikujących poprawność klasy MergeSort.
+ */
 #include "pch.h"
 #include "../MergeSort/MergeSort.h"
 
 // 1. Zachowuje tablicę niezmienioną, gdy ona jest już posortowana rosnąco
+/**
+ * @test Weryfikuje, czy tablica już posortowana rosnąco pozostaje niezmieniona.
+ */
 TEST(MergeSortGoogleTest, JuzPosortowanaRosnaco) {
     int tab[] = { 1, 2, 3, 4, 5 };
     int oczekiwane[] = { 1, 2, 3, 4, 5 };
@@ -16,6 +23,9 @@ TEST(MergeSortGoogleTest, JuzPosortowanaRosnaco) {
 }
 
 // 2. Potrafi posortować tablicę, która jest posortowana w odwrotnej kolejności
+/**
+ * @test Sprawdza poprawne sortowanie tablicy ułożonej w odwrotnej kolejności (malejąco).
+ */
 TEST(MergeSortGoogleTest, OdwrotnaKolejnosc) {
     int tab[] = { 9, 7, 5, 3, 1 };
     int oczekiwane[] = { 1, 3, 5, 7, 9 };
@@ -30,7 +40,9 @@ TEST(MergeSortGoogleTest, OdwrotnaKolejnosc) {
 }
 
 // 3. Poprawnie sortuje losową tablicę liczb
-
+/**
+ * @test Sprawdza poprawne sortowanie przykładowej losowej tablicy liczb całkowitych.
+ */
 TEST(MergeSortGoogleTest, LosowaTablica) {
     int tab[] = { 42, 7, 19, 83, 2, 56, 31, 14, 90, 5 };
     int oczekiwane[] = { 2, 5, 7, 14, 19, 31, 42, 56, 83, 90 };
@@ -45,6 +57,9 @@ TEST(MergeSortGoogleTest, LosowaTablica) {
 }
 
 // 4. Poprawnie sortuje tablicę tylko z liczbami ujemnymi
+/**
+ * @test Sprawdza sortowanie tablicy zawierającej wyłącznie liczby ujemne.
+ */
 TEST(MergeSortGoogleTest, TylkoUjemne) {
     int tab[] = { -5, -100, -1, -42, -17 };
     int oczekiwane[] = { -100, -42, -17, -5, -1 };
@@ -59,6 +74,9 @@ TEST(MergeSortGoogleTest, TylkoUjemne) {
 }
 
 // 5. Poprawnie sortuje tablicę z liczbami ujemnymi i dodatnimi
+/**
+ * @test Sprawdza sortowanie tablicy zawierającej jednocześnie liczby ujemne, zero oraz dodatnie.
+ */
 TEST(MergeSortGoogleTest, UjemneIDodatnie) {
     int tab[] = { -10, 25, 0, -3, 14, -1, 8 };
     int oczekiwane[] = { -10, -3, -1, 0, 8, 14, 25 };
@@ -73,6 +91,9 @@ TEST(MergeSortGoogleTest, UjemneIDodatnie) {
 }
 
 // 6. Obsługuje pustą tablicę bez rzucania wyjątku
+/**
+ * @test Weryfikuje bezpieczną obsługę pustej tablicy oraz wskaźnika nullptr bez rzucania wyjątku.
+ */
 TEST(MergeSortGoogleTest, PustaTablica) {
     int tab[1] = {};
     int rozmiar = 0;
@@ -83,6 +104,9 @@ TEST(MergeSortGoogleTest, PustaTablica) {
 }
 
 // 7. Nie zmienia tablicy, która zawiera tylko jeden element
+/**
+ * @test Sprawdza, czy tablica jednoelementowa nie ulega zmianie.
+ */
 TEST(MergeSortGoogleTest, JedenElement) {
     int tab[] = { 123 };
     int oczekiwane[] = { 123 };
@@ -97,6 +121,9 @@ TEST(MergeSortGoogleTest, JedenElement) {
 }
 
 // 8. Poprawnie sortuje tablicę z duplikatami liczb
+/**
+ * @test Sprawdza sortowanie tablicy z powtarzającymi się wartościami (duplikatami).
+ */
 TEST(MergeSortGoogleTest, ZDuplikatami) {
     int tab[] = { 4, 2, 4, 1, 2, 5, 1 };
     int oczekiwane[] = { 1, 1, 2, 2, 4, 4, 5 };
@@ -111,6 +138,9 @@ TEST(MergeSortGoogleTest, ZDuplikatami) {
 }
 
 // 9. Poprawnie sortuje tablicę ujemną z duplikatami
+/**
+ * @test Sprawdza sortowanie tablicy zawierającej liczby ujemne z duplikatami.
+ */
 TEST(MergeSortGoogleTest, UjemneZDuplikatami) {
     int tab[] = { -4, -9, -4, -1, -9, -2 };
     int oczekiwane[] = { -9, -9, -4, -4, -2, -1 };
@@ -125,6 +155,9 @@ TEST(MergeSortGoogleTest, UjemneZDuplikatami) {
 }
 
 // 10. Poprawnie sortuje tablicę z liczbami ujemnymi, dodatnimi oraz duplikatami
+/**
+ * @test Sprawdza sortowanie tablicy mieszanej (liczby ujemne, dodatnie oraz duplikaty).
+ */
 TEST(MergeSortGoogleTest, UjemneDodatnieIDuplikaty) {
     int tab[] = { 5, -3, 0, 5, -3, 12, 0, -8, 12 };
     int oczekiwane[] = { -8, -3, -3, 0, 0, 5, 5, 12, 12 };
@@ -139,6 +172,9 @@ TEST(MergeSortGoogleTest, UjemneDodatnieIDuplikaty) {
 }
 
 // 11. Poprawnie sortuje tablicę zawierającą tylko dwa elementy w kolejności rosnącej
+/**
+ * @test Sprawdza zachowanie algorytmu dla tablicy dwuelementowej posortowanej rosnąco.
+ */
 TEST(MergeSortGoogleTest, DwaElementyRosnaco) {
     int tab[] = { 10, 20 };
     int oczekiwane[] = { 10, 20 };
@@ -153,7 +189,9 @@ TEST(MergeSortGoogleTest, DwaElementyRosnaco) {
 }
 
 // 12. Poprawnie sortuje dużą tablicę zawierającą ponad 100 elementów
-
+/**
+ * @test Sprawdza poprawne sortowanie dużej tablicy liczącej powyżej 100 elementów (101 liczb).
+ */
 TEST(MergeSortGoogleTest, DuzaTablicaPonad100) {
     int tab[] = {
         54, 12, 89, 3, 47, 76, 21, 95, 8, 63,
@@ -179,6 +217,9 @@ TEST(MergeSortGoogleTest, DuzaTablicaPonad100) {
 }
 
 // 13. Poprawnie sortuje dużą tablicę zawierającą ponad 100 elementów z liczbami ujemnymi, dodatnimi oraz duplikatami
+/**
+ * @test Sprawdza poprawne sortowanie dużej tablicy (>100 elementów) z liczbami ujemnymi, dodatnimi i duplikatami.
+ */
 TEST(MergeSortGoogleTest, DuzaTablicaPonad100UjemneDodatnieDuplikaty) {
     int tab[] = {
         -15, 4, 22, -15, 0, 8, -3, 19, 4, -42,

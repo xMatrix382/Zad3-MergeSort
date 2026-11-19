@@ -1,8 +1,20 @@
-﻿#include <iostream>
+﻿/**
+ * @file main.cpp
+ * @brief Główny plik programu demonstrujący działanie klasy szablonowej MergeSort.
+ */
+#include <iostream>
 #include "MergeSort.h"
 
 using namespace std;
-
+/**
+ * @brief Punkt wejścia aplikacji.
+ *
+ * Tworzy dwie niezależne instancje tablic (dla typów \c int oraz \c double),
+ * wyświetla ich stan początkowy, sortuje je przy użyciu klasy MergeSort
+ * i wypisuje wynik na standardowe wyjście.
+ *
+ * @return Kod zakończenia programu (0 oznacza poprawne wykonanie).
+ */
 int main() {
     // 1. Tablica int
     int tabInt[] = { 67, 27, 69, 1, 9, 72 };

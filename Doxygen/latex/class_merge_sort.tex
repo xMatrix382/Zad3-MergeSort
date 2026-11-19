@@ -1,0 +1,101 @@
+\doxysection{Merge\+Sort\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_merge_sort}{}\label{class_merge_sort}\index{MergeSort$<$ T $>$@{MergeSort$<$ T $>$}}
+
+
+Klasa szablonowa implementująca algorytm sortowania przez scalanie (\doxylink{class_merge_sort}{Merge\+Sort}).  
+
+
+
+
+{\ttfamily \+\#include $<$Merge\+Sort.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_merge_sort_a9113a58ab8fa13dea4e0dbcf2d74edaa}{sortuj}} (T \texorpdfstring{$\ast$}{*}tab, int rozmiar)
+\begin{DoxyCompactList}\small\item\em Rekurencyjnie sortuje przekazaną tablicę rosnąco metodą przez scalanie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_merge_sort_a4f692bb3cbcf2b709db1a5754de8b0b8}{scal}} (T \texorpdfstring{$\ast$}{*}tab, int lewy, int srodek, int prawy)
+\begin{DoxyCompactList}\small\item\em Scala dwie posortowane podtablice w jedną uporządkowaną całość. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Merge\+Sort$<$ T $>$}
+Klasa szablonowa implementująca algorytm sortowania przez scalanie (\doxylink{class_merge_sort}{Merge\+Sort}). 
+
+Algorytm działa w oparciu o paradygmat „dziel i zwyciężaj” ze złożonością czasową $O(n \log n)$ oraz pamięciową $O(n)$.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Typ elementów przechowywanych w tablicy (musi obsługiwać operator porównania \texorpdfstring{$<$}{<}=). \\
+\hline
+\end{DoxyTemplParams}
+
+
+Definition at line \doxymbox{\hyperlink{_merge_sort_8h_source_l00019}{19}} of file \doxymbox{\hyperlink{_merge_sort_8h_source}{Merge\+Sort.\+h}}.
+
+
+
+\label{class_merge_sort_doc-func-members}
+\Hypertarget{class_merge_sort_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_merge_sort_a4f692bb3cbcf2b709db1a5754de8b0b8}\index{MergeSort$<$ T $>$@{MergeSort$<$ T $>$}!scal@{scal}}
+\index{scal@{scal}!MergeSort$<$ T $>$@{MergeSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{scal()}{scal()}}
+{\footnotesize\ttfamily \label{class_merge_sort_a4f692bb3cbcf2b709db1a5754de8b0b8} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{class_merge_sort}{Merge\+Sort}}$<$ T $>$::\+scal (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{tab}{, }\item[{int}]{lewy}{, }\item[{int}]{srodek}{, }\item[{int}]{prawy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Scala dwie posortowane podtablice w jedną uporządkowaną całość. 
+
+Funkcja dzieli rozpatrywany fragment tablicy na dwie tablice pomocnicze (lewą i prawą), a następnie przepisuje elementy z powrotem do tablicy głównej w kolejności niemalejącej.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Wskaźnik na sortowaną tablicę elementów. \\
+\hline
+{\em lewy} & Indeks początkowy lewej podtablicy. \\
+\hline
+{\em srodek} & Indeks końcowy lewej podtablicy (punkt podziału). \\
+\hline
+{\em prawy} & Indeks końcowy prawej podtablicy. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{_merge_sort_8h_source_l00032}{32}} of file \doxymbox{\hyperlink{_merge_sort_8h_source}{Merge\+Sort.\+h}}.
+
+\Hypertarget{class_merge_sort_a9113a58ab8fa13dea4e0dbcf2d74edaa}\index{MergeSort$<$ T $>$@{MergeSort$<$ T $>$}!sortuj@{sortuj}}
+\index{sortuj@{sortuj}!MergeSort$<$ T $>$@{MergeSort$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sortuj()}{sortuj()}}
+{\footnotesize\ttfamily \label{class_merge_sort_a9113a58ab8fa13dea4e0dbcf2d74edaa} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{class_merge_sort}{Merge\+Sort}}$<$ T $>$::\+sortuj (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{tab}{, }\item[{int}]{rozmiar}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rekurencyjnie sortuje przekazaną tablicę rosnąco metodą przez scalanie. 
+
+W przypadku przekazania pustego wskaźnika ({\ttfamily nullptr}) lub tablicy o rozmiarze mniejszym bądź równym 1 metoda kończy działanie bez modyfikacji danych.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Wskaźnik na tablicę do posortowania. \\
+\hline
+{\em rozmiar} & Liczba elementów w tablicy. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{_merge_sort_8h_source_l00069}{69}} of file \doxymbox{\hyperlink{_merge_sort_8h_source}{Merge\+Sort.\+h}}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+Merge\+Sort/\doxymbox{\hyperlink{_merge_sort_8h}{Merge\+Sort.\+h}}\end{DoxyCompactItemize}
